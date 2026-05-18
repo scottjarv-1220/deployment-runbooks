@@ -3,7 +3,7 @@
 **Status:** Audited & Verified  
 **Objective:** Document business justification, licensing compliance, and governance rationale for non-personal domain accounts.
 
-## 📋 Executive Summary
+## Executive Summary
 This document records the justification for non personal "Functional Accounts" operating within the enterprise Webex domain. These accounts serve specific operational needs and are structured to ensure full compliance with Cisco licensing agreements. As of May 2026, Cisco has confirmed in writing that free tier accounts do not impact the Deployed Knowledge Worker (DKW) count for True Forward purposes.
 
 ---
@@ -49,7 +49,7 @@ These accounts host role-specific events that require advanced meeting functiona
 
 ---
 
-## ⚖️ Governance & Compliance Notes
+## Governance & Compliance Notes
 * **Audit Status:** All functional accounts were audited and validated in May 2026.
 * **Licensing Integrity:** Paid functional accounts are used for operational necessity and are not a substitute for individual NamedUser licenses.
 * **Annual Review:** This document is subject to annual review or upon significant changes to Cisco's licensing model.
