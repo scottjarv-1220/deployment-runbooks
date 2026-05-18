@@ -2,12 +2,12 @@
 **Target Go-Live:** Date / Year 
 **Role:** Project Lead / Systems Analyst
 
-## Executive Summary
+# Executive Summary
 This runbook outlines the migration of a 2000 user enterprise environmentfrom Basic Authentication to Entra ID SAML Single Sign-On (SSO). The primary objective was to enhance corporate security while maintaining zero to minimal downtime for mission critical collaboration tools, including high profile external Board of Directors access. This rundown is for an evnironment using Control Hub Pro Pack and a hybrid Exchange Calendar Connector. On prem Exchange, on prem Active Directory with EntraID.
 
-## This runbook is gaming the following scenario. With above Executive Summary, implementation is occuring on a Thursday evening to assure minimal downtime.
+This runbook is gaming the following scenario. With above Executive Summary, implementation is occuring on a Thursday evening to assure minimal downtime.
 
-## Authentication Tiering & Account Logic
+# Authentication Tiering & Account Logic
 A critical component of this deployment was the classification of accounts into specific authentication tiers to ensure zero to minimal downtime for departmental operations.
 
 | Account Category | Auth Method | Use Case |
