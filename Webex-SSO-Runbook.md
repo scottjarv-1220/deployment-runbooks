@@ -3,7 +3,9 @@
 **Role:** Project Lead / Systems Analyst
 
 ## Executive Summary
-This runbook outlines the migration of a 2,000 user enterprise environmentfrom Basic Authentication to Entra ID SAML Single Sign-On (SSO). The primary objective was to enhance corporate security while maintaining zero to minimal downtime for mission critical collaboration tools, including high profile external Board of Directors access. This rundown is for an evnironment using Control Hub Pro Pack and a hybrid Exchange Calendar Connector. On prem Exchange, on prem Active Directory with EntraID.
+This runbook outlines the migration of a 2000 user enterprise environmentfrom Basic Authentication to Entra ID SAML Single Sign-On (SSO). The primary objective was to enhance corporate security while maintaining zero to minimal downtime for mission critical collaboration tools, including high profile external Board of Directors access. This rundown is for an evnironment using Control Hub Pro Pack and a hybrid Exchange Calendar Connector. On prem Exchange, on prem Active Directory with EntraID.
+
+## This runbook is gaming the following scenario. With above Executive Summary, implementation is occuring on a Thursday evening to assure minimal downtime.
 
 ## Authentication Tiering & Account Logic
 A critical component of this deployment was the classification of accounts into specific authentication tiers to ensure zero to minimal downtime for departmental operations.
@@ -21,17 +23,19 @@ A critical component of this deployment was the classification of accounts into 
 
 ## Pre Deployment Validation (T-Minus 7 Days)
 - [ ] **Stakeholder Approval:** Final verification of SSO Justification via Cyber Security.
-- [ ] **Impact Assessment:** Identified potential "Orphaned" accounts (Conference Rooms, External Board Members).
-- [ ] **Testing Strategy:** Create external sandbox accounts to simulate Board Member login flows.
-- [ ] **Communication:** Drafted transparent user notices with public internal Confluence documentation.
+- [ ] **Impact Assessment:** Identified potential "Orphaned" accounts (Conference Rooms, External Board of Directors).
+- [ ] **Testing Strategy:** Create am external sandbox account to simulate any external (eg- Board of Directors) login flows.
+- [ ] **Communication:** Draft transparent user notices with public internal Confluence Q&A documentation. Test links in a private window session to verify their functionality.
 
 ## Risk Mitigation & "Break-Glass" Strategy
 To prevent administrative lockout during the IDP switchover:
-1. **Break-Glass Group:** Verify a dedicated Control Hub group with non SSO bypass permissions. Verify correct group accounts are placed in here.
-2. **Functional Account Tiering:** Audit service accounts (Group1, Group2, Group3, etc.) to ensure tiering remains intact post enforcement.
-3. **Emergency Credentials:** Secure offline access to `generic-account` administrative credentials.
+- [ ] **Break-Glass Group:** Verify a dedicated Control Hub group with SSO bypass permissions. Verify correct group accounts are placed in here.
+- [ ] **Functional Account Tiering:** Audit service accounts (Group1, Group2, Group3, etc.) to ensure tiering remains intact post enforcement.
+- [ ] **Emergency Credentials:** Secure offline access to `generic-account` administrative credentials.
 
 ## Execution Phase (Go-Live Window)
+### Phase 1: Communication
+- [ ] **Public Notice** Within five days of go-live, send out internal public notice communication of upcoming Webex SSO change and link public internal Conflunce Q&A documentation.
 ### Phase 1: Authentication Switch
 * **Primary IDP:** Enable Entra ID SAML.
 * **Secondary IDP:** Enable Webex Basic Auth specifically for the "Break-Glass" and Group accounts.
